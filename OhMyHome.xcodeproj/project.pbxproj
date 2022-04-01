@@ -20,6 +20,8 @@
 		F8653F7A27F718D7009800FE /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8653F7927F718D7009800FE /* Result.swift */; };
 		F8653F7C27F718EE009800FE /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8653F7B27F718EE009800FE /* ApiResponse.swift */; };
 		F8653F7E27F7190E009800FE /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8653F7D27F7190E009800FE /* JSON.swift */; };
+		F8653F8127F71A49009800FE /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8653F8027F71A49009800FE /* SearchViewController.swift */; };
+		F8653F8327F734D2009800FE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8653F8227F734D2009800FE /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		F8653F7927F718D7009800FE /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		F8653F7B27F718EE009800FE /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
 		F8653F7D27F7190E009800FE /* JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
+		F8653F8027F71A49009800FE /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		F8653F8227F734D2009800FE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +146,8 @@
 		F8653F7127F70E6E009800FE /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				F8653F7F27F71A08009800FE /* Search */,
+				F8653F8227F734D2009800FE /* AppCoordinator.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -177,6 +183,14 @@
 				F8653F7D27F7190E009800FE /* JSON.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		F8653F7F27F71A08009800FE /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				F8653F8027F71A49009800FE /* SearchViewController.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,9 +326,11 @@
 			files = (
 				F8653F4627F6D2AD009800FE /* ViewController.swift in Sources */,
 				F8653F7E27F7190E009800FE /* JSON.swift in Sources */,
+				F8653F8127F71A49009800FE /* SearchViewController.swift in Sources */,
 				F8653F7A27F718D7009800FE /* Result.swift in Sources */,
 				F8653F4227F6D2AD009800FE /* AppDelegate.swift in Sources */,
 				F8653F7C27F718EE009800FE /* ApiResponse.swift in Sources */,
+				F8653F8327F734D2009800FE /* AppCoordinator.swift in Sources */,
 				F8653F4427F6D2AD009800FE /* SceneDelegate.swift in Sources */,
 				F8653F7727F718AD009800FE /* ApiClient.swift in Sources */,
 			);
