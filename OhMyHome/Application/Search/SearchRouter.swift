@@ -6,3 +6,19 @@
 //
 
 import Foundation
+
+protocol SearchRouter {
+    func moveToDetail()
+}
+
+class SearchRouterImpl : SearchRouter {
+    fileprivate weak var searchViewController: SearchViewController?
+    
+    init(searchViewController: SearchViewController) {
+        self.searchViewController = searchViewController
+    }
+    
+    func moveToDetail() {
+        //TODO: move to detail here
+    }
+}

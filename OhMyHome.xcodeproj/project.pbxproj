@@ -18,18 +18,21 @@
 		F8653F6527F6D2AF009800FE /* OhMyHomeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8653F6427F6D2AF009800FE /* OhMyHomeUITestsLaunchTests.swift */; };
 		F8653F8127F71A49009800FE /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8653F8027F71A49009800FE /* SearchViewController.swift */; };
 		F8653F8327F734D2009800FE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8653F8227F734D2009800FE /* AppCoordinator.swift */; };
-		F8653F9427F73967009800FE /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8653F8627F73967009800FE /* ParameterEncoder.swift */; };
-		F8653F9527F73967009800FE /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8653F8727F73967009800FE /* URLParameterEncoder.swift */; };
-		F8653F9627F73967009800FE /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8653F8827F73967009800FE /* JSONParameterEncoder.swift */; };
-		F8653F9727F73967009800FE /* NetworkResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8653F8A27F73967009800FE /* NetworkResponseError.swift */; };
-		F8653F9827F73967009800FE /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8653F8B27F73967009800FE /* NetworkError.swift */; };
-		F8653F9927F73967009800FE /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8653F8D27F73967009800FE /* NetworkService.swift */; };
-		F8653F9A27F73967009800FE /* ReponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8653F8F27F73967009800FE /* ReponseHandler.swift */; };
-		F8653F9B27F73967009800FE /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8653F9027F73967009800FE /* HTTPTask.swift */; };
-		F8653F9C27F73967009800FE /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8653F9127F73967009800FE /* HTTPMethod.swift */; };
-		F8653F9D27F73967009800FE /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8653F9227F73967009800FE /* EndPointType.swift */; };
-		F8653F9E27F73967009800FE /* NetworkCheckService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8653F9327F73967009800FE /* NetworkCheckService.swift */; };
-		F8653FA027F73988009800FE /* ItunesSearchApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8653F9F27F73988009800FE /* ItunesSearchApi.swift */; };
+		F8653FA327F73B68009800FE /* ItunesMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8653FA227F73B68009800FE /* ItunesMedia.swift */; };
+		F8653FA527F73CB5009800FE /* ApiItunesMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8653FA427F73CB5009800FE /* ApiItunesMedia.swift */; };
+		F8653FA927F73D57009800FE /* SearchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8653FA827F73D57009800FE /* SearchUseCase.swift */; };
+		F8653FB227F74057009800FE /* ApiSearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8653FB127F74057009800FE /* ApiSearchRepository.swift */; };
+		F8653FEB27F754DE009800FE /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8653FEA27F754DE009800FE /* ApiClient.swift */; };
+		F8653FED27F754F4009800FE /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8653FEC27F754F4009800FE /* ApiResponse.swift */; };
+		F8653FEF27F75536009800FE /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8653FEE27F75536009800FE /* Result.swift */; };
+		F8653FF227F7554F009800FE /* SearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8653FF127F7554F009800FE /* SearchRepository.swift */; };
+		F8653FF627F7562C009800FE /* SearchApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8653FF527F7562C009800FE /* SearchApi.swift */; };
+		F8653FF827F758A7009800FE /* ApiRequest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8653FF727F758A7009800FE /* ApiRequest+Extensions.swift */; };
+		F8653FFA27F75D18009800FE /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8653FF927F75D18009800FE /* SearchPresenter.swift */; };
+		F8653FFC27F75E1E009800FE /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8653FFB27F75E1E009800FE /* SearchRouter.swift */; };
+		F8653FFE27F75EB2009800FE /* SearchFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8653FFD27F75EB2009800FE /* SearchFactory.swift */; };
+		F865400127F76292009800FE /* ViewControllerBaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F865400027F76292009800FE /* ViewControllerBaseProtocol.swift */; };
+		F865400327F76340009800FE /* TextFieldBaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F865400227F76340009800FE /* TextFieldBaseProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,18 +68,21 @@
 		F8653F6427F6D2AF009800FE /* OhMyHomeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OhMyHomeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F8653F8027F71A49009800FE /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		F8653F8227F734D2009800FE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		F8653F8627F73967009800FE /* ParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoder.swift; sourceTree = "<group>"; };
-		F8653F8727F73967009800FE /* URLParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
-		F8653F8827F73967009800FE /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
-		F8653F8A27F73967009800FE /* NetworkResponseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResponseError.swift; sourceTree = "<group>"; };
-		F8653F8B27F73967009800FE /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
-		F8653F8D27F73967009800FE /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		F8653F8F27F73967009800FE /* ReponseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReponseHandler.swift; sourceTree = "<group>"; };
-		F8653F9027F73967009800FE /* HTTPTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
-		F8653F9127F73967009800FE /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
-		F8653F9227F73967009800FE /* EndPointType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
-		F8653F9327F73967009800FE /* NetworkCheckService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkCheckService.swift; sourceTree = "<group>"; };
-		F8653F9F27F73988009800FE /* ItunesSearchApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesSearchApi.swift; sourceTree = "<group>"; };
+		F8653FA227F73B68009800FE /* ItunesMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesMedia.swift; sourceTree = "<group>"; };
+		F8653FA427F73CB5009800FE /* ApiItunesMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiItunesMedia.swift; sourceTree = "<group>"; };
+		F8653FA827F73D57009800FE /* SearchUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUseCase.swift; sourceTree = "<group>"; };
+		F8653FB127F74057009800FE /* ApiSearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiSearchRepository.swift; sourceTree = "<group>"; };
+		F8653FEA27F754DE009800FE /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		F8653FEC27F754F4009800FE /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
+		F8653FEE27F75536009800FE /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		F8653FF127F7554F009800FE /* SearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepository.swift; sourceTree = "<group>"; };
+		F8653FF527F7562C009800FE /* SearchApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchApi.swift; sourceTree = "<group>"; };
+		F8653FF727F758A7009800FE /* ApiRequest+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiRequest+Extensions.swift"; sourceTree = "<group>"; };
+		F8653FF927F75D18009800FE /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
+		F8653FFB27F75E1E009800FE /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
+		F8653FFD27F75EB2009800FE /* SearchFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFactory.swift; sourceTree = "<group>"; };
+		F865400027F76292009800FE /* ViewControllerBaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerBaseProtocol.swift; sourceTree = "<group>"; };
+		F865400227F76340009800FE /* TextFieldBaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldBaseProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +168,7 @@
 		F8653F7127F70E6E009800FE /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				F8653FFF27F7627E009800FE /* Protocol */,
 				F8653F7F27F71A08009800FE /* Search */,
 				F8653F8227F734D2009800FE /* AppCoordinator.swift */,
 			);
@@ -171,6 +178,8 @@
 		F8653F7227F70EBE009800FE /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				F8653FA627F73D33009800FE /* UseCases */,
+				F8653FA127F73AAE009800FE /* Entities */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -178,7 +187,7 @@
 		F8653F7327F70EC4009800FE /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				F8653F9F27F73988009800FE /* ItunesSearchApi.swift */,
+				F8653FAD27F73E8D009800FE /* Api */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -186,7 +195,7 @@
 		F8653F7427F71896009800FE /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				F8653F8427F73967009800FE /* Network */,
+				F8653FE927F754D5009800FE /* Network */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -195,58 +204,90 @@
 			isa = PBXGroup;
 			children = (
 				F8653F8027F71A49009800FE /* SearchViewController.swift */,
+				F8653FF927F75D18009800FE /* SearchPresenter.swift */,
+				F8653FFB27F75E1E009800FE /* SearchRouter.swift */,
+				F8653FFD27F75EB2009800FE /* SearchFactory.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
 		};
-		F8653F8427F73967009800FE /* Network */ = {
+		F8653FA127F73AAE009800FE /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				F8653F8527F73967009800FE /* Serialization */,
-				F8653F8927F73967009800FE /* Errors */,
-				F8653F8C27F73967009800FE /* Service */,
-				F8653F8E27F73967009800FE /* Supporting */,
-				F8653F9327F73967009800FE /* NetworkCheckService.swift */,
+				F8653FA227F73B68009800FE /* ItunesMedia.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		F8653FA627F73D33009800FE /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				F8653FA827F73D57009800FE /* SearchUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		F8653FA727F73D3C009800FE /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				F8653FA427F73CB5009800FE /* ApiItunesMedia.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		F8653FAC27F73E82009800FE /* ApiRepo */ = {
+			isa = PBXGroup;
+			children = (
+				F8653FF427F75618009800FE /* Request */,
+				F8653FB127F74057009800FE /* ApiSearchRepository.swift */,
+			);
+			path = ApiRepo;
+			sourceTree = "<group>";
+		};
+		F8653FAD27F73E8D009800FE /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				F8653FF027F75541009800FE /* Repository */,
+				F8653FA727F73D3C009800FE /* Entities */,
+				F8653FAC27F73E82009800FE /* ApiRepo */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		F8653FE927F754D5009800FE /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F8653FEA27F754DE009800FE /* ApiClient.swift */,
+				F8653FEC27F754F4009800FE /* ApiResponse.swift */,
+				F8653FEE27F75536009800FE /* Result.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
 		};
-		F8653F8527F73967009800FE /* Serialization */ = {
+		F8653FF027F75541009800FE /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				F8653F8627F73967009800FE /* ParameterEncoder.swift */,
-				F8653F8727F73967009800FE /* URLParameterEncoder.swift */,
-				F8653F8827F73967009800FE /* JSONParameterEncoder.swift */,
+				F8653FF127F7554F009800FE /* SearchRepository.swift */,
 			);
-			path = Serialization;
+			path = Repository;
 			sourceTree = "<group>";
 		};
-		F8653F8927F73967009800FE /* Errors */ = {
+		F8653FF427F75618009800FE /* Request */ = {
 			isa = PBXGroup;
 			children = (
-				F8653F8A27F73967009800FE /* NetworkResponseError.swift */,
-				F8653F8B27F73967009800FE /* NetworkError.swift */,
+				F8653FF527F7562C009800FE /* SearchApi.swift */,
+				F8653FF727F758A7009800FE /* ApiRequest+Extensions.swift */,
 			);
-			path = Errors;
+			path = Request;
 			sourceTree = "<group>";
 		};
-		F8653F8C27F73967009800FE /* Service */ = {
+		F8653FFF27F7627E009800FE /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				F8653F8D27F73967009800FE /* NetworkService.swift */,
+				F865400027F76292009800FE /* ViewControllerBaseProtocol.swift */,
+				F865400227F76340009800FE /* TextFieldBaseProtocol.swift */,
 			);
-			path = Service;
-			sourceTree = "<group>";
-		};
-		F8653F8E27F73967009800FE /* Supporting */ = {
-			isa = PBXGroup;
-			children = (
-				F8653F8F27F73967009800FE /* ReponseHandler.swift */,
-				F8653F9027F73967009800FE /* HTTPTask.swift */,
-				F8653F9127F73967009800FE /* HTTPMethod.swift */,
-				F8653F9227F73967009800FE /* EndPointType.swift */,
-			);
-			path = Supporting;
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -380,23 +421,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8653F9927F73967009800FE /* NetworkService.swift in Sources */,
-				F8653F9A27F73967009800FE /* ReponseHandler.swift in Sources */,
-				F8653F9C27F73967009800FE /* HTTPMethod.swift in Sources */,
-				F8653F9727F73967009800FE /* NetworkResponseError.swift in Sources */,
-				F8653FA027F73988009800FE /* ItunesSearchApi.swift in Sources */,
-				F8653F9627F73967009800FE /* JSONParameterEncoder.swift in Sources */,
-				F8653F9427F73967009800FE /* ParameterEncoder.swift in Sources */,
-				F8653F9B27F73967009800FE /* HTTPTask.swift in Sources */,
+				F8653FEB27F754DE009800FE /* ApiClient.swift in Sources */,
+				F8653FF627F7562C009800FE /* SearchApi.swift in Sources */,
+				F8653FEF27F75536009800FE /* Result.swift in Sources */,
+				F8653FF827F758A7009800FE /* ApiRequest+Extensions.swift in Sources */,
+				F8653FA927F73D57009800FE /* SearchUseCase.swift in Sources */,
 				F8653F4627F6D2AD009800FE /* ViewController.swift in Sources */,
-				F8653F9D27F73967009800FE /* EndPointType.swift in Sources */,
 				F8653F8127F71A49009800FE /* SearchViewController.swift in Sources */,
+				F8653FFC27F75E1E009800FE /* SearchRouter.swift in Sources */,
+				F865400327F76340009800FE /* TextFieldBaseProtocol.swift in Sources */,
 				F8653F4227F6D2AD009800FE /* AppDelegate.swift in Sources */,
-				F8653F9527F73967009800FE /* URLParameterEncoder.swift in Sources */,
+				F8653FA527F73CB5009800FE /* ApiItunesMedia.swift in Sources */,
 				F8653F8327F734D2009800FE /* AppCoordinator.swift in Sources */,
-				F8653F9E27F73967009800FE /* NetworkCheckService.swift in Sources */,
+				F8653FB227F74057009800FE /* ApiSearchRepository.swift in Sources */,
+				F8653FED27F754F4009800FE /* ApiResponse.swift in Sources */,
+				F8653FF227F7554F009800FE /* SearchRepository.swift in Sources */,
+				F8653FA327F73B68009800FE /* ItunesMedia.swift in Sources */,
+				F8653FFA27F75D18009800FE /* SearchPresenter.swift in Sources */,
+				F8653FFE27F75EB2009800FE /* SearchFactory.swift in Sources */,
+				F865400127F76292009800FE /* ViewControllerBaseProtocol.swift in Sources */,
 				F8653F4427F6D2AD009800FE /* SceneDelegate.swift in Sources */,
-				F8653F9827F73967009800FE /* NetworkError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

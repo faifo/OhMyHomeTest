@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct ItunesMedia {
+    var kind: String?
+    var artworkUrl60: String?
+    var trackName: String?
+}

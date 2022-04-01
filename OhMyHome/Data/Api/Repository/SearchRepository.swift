@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+protocol SearchRepository {
+    func searchItunesMedia(parameters: SearchParameters, completion: @escaping SearchCompletionHandler)
+}

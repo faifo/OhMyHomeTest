@@ -14,6 +14,8 @@ final class AppCoordinator {
     init(window: UIWindow) {
         self.window = window
         let searchViewController = SearchViewController()
+        let searchFactory = SearchFactory()
+        searchFactory.configure(searchViewController: searchViewController)
         navigationController = UINavigationController(rootViewController: searchViewController)
     }
     

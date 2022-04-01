@@ -9,6 +9,9 @@ import UIKit
 
 class SearchViewController: UIViewController {
     
+    var presenter: SearchPresenterImpl!
+    var configurator: SearchFactory!
+    
     lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -117,10 +120,16 @@ extension SearchViewController: UITableViewDelegate {
 
 extension SearchViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        presenter.textDidChange(searchBar: searchBar, text: searchText)
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
+        presenter.searchButtonClicked(searchBar: searchBar)
     }
+}
+
+extension SearchViewController: SearchView {
+    
 }
 
