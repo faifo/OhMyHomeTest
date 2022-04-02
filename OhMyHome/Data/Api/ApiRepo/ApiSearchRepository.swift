@@ -20,7 +20,7 @@ class ApiSearchRepositoryImpl : ApiSearchRepository {
     }
     
     func searchItunesMedia(parameters: SearchParameters, completion: @escaping SearchCompletionHandler) {
-        let searchApiRequest = SearchApi(parameters: ["term" : parameters.term, "limit" : "\(20)", "offset": "\(parameters.offset)"])
+        let searchApiRequest = SearchApi(parameters: ["term" : parameters.term, "limit" : "\(50)", "offset": "\(parameters.offset)"])
         apiClient.execute(request: searchApiRequest) { (result: Result<ApiResponse<ApiSearchResponse>>) in
             switch result {
                 case let .success(response):

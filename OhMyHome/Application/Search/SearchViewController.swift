@@ -52,6 +52,7 @@ class SearchViewController: UIViewController {
         tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: view.safeAreaInsets.bottom, right: 0)
         tableViewBottomConstraint = tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         tableViewBottomConstraint?.isActive = true
+        tableView.register(UINib(nibName: ItunesMediaCell.identifier, bundle: Bundle.main), forCellReuseIdentifier: ItunesMediaCell.identifier)
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardShow(notification:)), name: UIWindow.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardHide(notification:)), name: UIWindow.keyboardWillHideNotification, object: nil)
@@ -100,11 +101,16 @@ class SearchViewController: UIViewController {
 
 extension SearchViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return presenter.medias.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: ItunesMediaCell.identifier, for: indexPath) as! ItunesMediaCell
+        presenter.configureCell(cell: cell, at: indexPath.row)
+        if indexPath.row == presenter.medias.count - 5 {
+            presenter.loadMore()
+        }
+        return cell
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -130,6 +136,10 @@ extension SearchViewController: UISearchBarDelegate {
 }
 
 extension SearchViewController: SearchView {
-    
+    func refreshTableView() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
 }
 

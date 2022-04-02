@@ -33,6 +33,8 @@
 		F8653FFE27F75EB2009800FE /* SearchFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8653FFD27F75EB2009800FE /* SearchFactory.swift */; };
 		F865400127F76292009800FE /* ViewControllerBaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F865400027F76292009800FE /* ViewControllerBaseProtocol.swift */; };
 		F865400327F76340009800FE /* TextFieldBaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F865400227F76340009800FE /* TextFieldBaseProtocol.swift */; };
+		F865401427F80AC4009800FE /* ItunesMediaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F865401227F80AC4009800FE /* ItunesMediaCell.swift */; };
+		F865401527F80AC4009800FE /* ItunesMediaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F865401327F80AC4009800FE /* ItunesMediaCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,8 @@
 		F8653FFD27F75EB2009800FE /* SearchFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFactory.swift; sourceTree = "<group>"; };
 		F865400027F76292009800FE /* ViewControllerBaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerBaseProtocol.swift; sourceTree = "<group>"; };
 		F865400227F76340009800FE /* TextFieldBaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldBaseProtocol.swift; sourceTree = "<group>"; };
+		F865401227F80AC4009800FE /* ItunesMediaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesMediaCell.swift; sourceTree = "<group>"; };
+		F865401327F80AC4009800FE /* ItunesMediaCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItunesMediaCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +207,7 @@
 		F8653F7F27F71A08009800FE /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				F865401127F80AB2009800FE /* Cell */,
 				F8653F8027F71A49009800FE /* SearchViewController.swift */,
 				F8653FF927F75D18009800FE /* SearchPresenter.swift */,
 				F8653FFB27F75E1E009800FE /* SearchRouter.swift */,
@@ -288,6 +293,15 @@
 				F865400227F76340009800FE /* TextFieldBaseProtocol.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		F865401127F80AB2009800FE /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F865401227F80AC4009800FE /* ItunesMediaCell.swift */,
+				F865401327F80AC4009800FE /* ItunesMediaCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,6 +408,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F865401527F80AC4009800FE /* ItunesMediaCell.xib in Resources */,
 				F8653F4E27F6D2AF009800FE /* LaunchScreen.storyboard in Resources */,
 				F8653F4B27F6D2AF009800FE /* Assets.xcassets in Resources */,
 				F8653F4927F6D2AD009800FE /* Main.storyboard in Resources */,
@@ -422,6 +437,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8653FEB27F754DE009800FE /* ApiClient.swift in Sources */,
+				F865401427F80AC4009800FE /* ItunesMediaCell.swift in Sources */,
 				F8653FF627F7562C009800FE /* SearchApi.swift in Sources */,
 				F8653FEF27F75536009800FE /* Result.swift in Sources */,
 				F8653FF827F758A7009800FE /* ApiRequest+Extensions.swift in Sources */,
