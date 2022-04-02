@@ -120,7 +120,7 @@ extension SearchViewController: UITableViewDataSource {
 
 extension SearchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       
+        presenter.moveToDetail(at: indexPath.row)
     }
 }
 

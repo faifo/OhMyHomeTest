@@ -10,6 +10,7 @@ import UIKit
 protocol SearchPresenter : ViewControllerBaseProtocol, SearchBarBaseProtocol {
     func configureCell(cell : ItunesMediaCell, at row : Int)
     func loadMore()
+    func moveToDetail(at row : Int)
 }
 
 protocol SearchView: AnyObject {
@@ -97,5 +98,10 @@ class SearchPresenterImpl: SearchPresenter {
     
     func loadMore() {
         search()
+    }
+    
+    func moveToDetail(at row: Int) {
+        let media = self.medias[row]
+        self.router.moveToDetail(media: media)
     }
 }

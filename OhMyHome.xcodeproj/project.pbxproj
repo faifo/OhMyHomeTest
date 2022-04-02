@@ -35,6 +35,14 @@
 		F865400327F76340009800FE /* TextFieldBaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F865400227F76340009800FE /* TextFieldBaseProtocol.swift */; };
 		F865401427F80AC4009800FE /* ItunesMediaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F865401227F80AC4009800FE /* ItunesMediaCell.swift */; };
 		F865401527F80AC4009800FE /* ItunesMediaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F865401327F80AC4009800FE /* ItunesMediaCell.xib */; };
+		F865401827F8147D009800FE /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F865401727F8147D009800FE /* DetailsViewController.swift */; };
+		F865401C27F82168009800FE /* ArtworkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F865401A27F82168009800FE /* ArtworkCell.swift */; };
+		F865401D27F82168009800FE /* ArtworkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F865401B27F82168009800FE /* ArtworkCell.xib */; };
+		F865402027F82396009800FE /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F865401E27F82396009800FE /* DetailCell.swift */; };
+		F865402127F82396009800FE /* DetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F865401F27F82396009800FE /* DetailCell.xib */; };
+		F865402327F824F2009800FE /* DetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F865402227F824F2009800FE /* DetailsPresenter.swift */; };
+		F865402527F82504009800FE /* DetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F865402427F82504009800FE /* DetailsRouter.swift */; };
+		F865402727F82512009800FE /* DetailsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F865402627F82512009800FE /* DetailsFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +95,14 @@
 		F865400227F76340009800FE /* TextFieldBaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldBaseProtocol.swift; sourceTree = "<group>"; };
 		F865401227F80AC4009800FE /* ItunesMediaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesMediaCell.swift; sourceTree = "<group>"; };
 		F865401327F80AC4009800FE /* ItunesMediaCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItunesMediaCell.xib; sourceTree = "<group>"; };
+		F865401727F8147D009800FE /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		F865401A27F82168009800FE /* ArtworkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkCell.swift; sourceTree = "<group>"; };
+		F865401B27F82168009800FE /* ArtworkCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtworkCell.xib; sourceTree = "<group>"; };
+		F865401E27F82396009800FE /* DetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
+		F865401F27F82396009800FE /* DetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCell.xib; sourceTree = "<group>"; };
+		F865402227F824F2009800FE /* DetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenter.swift; sourceTree = "<group>"; };
+		F865402427F82504009800FE /* DetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRouter.swift; sourceTree = "<group>"; };
+		F865402627F82512009800FE /* DetailsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +188,7 @@
 		F8653F7127F70E6E009800FE /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				F865401627F8144D009800FE /* Detail */,
 				F8653FFF27F7627E009800FE /* Protocol */,
 				F8653F7F27F71A08009800FE /* Search */,
 				F8653F8227F734D2009800FE /* AppCoordinator.swift */,
@@ -304,6 +321,29 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		F865401627F8144D009800FE /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				F865401927F8214D009800FE /* Cells */,
+				F865401727F8147D009800FE /* DetailsViewController.swift */,
+				F865402227F824F2009800FE /* DetailsPresenter.swift */,
+				F865402427F82504009800FE /* DetailsRouter.swift */,
+				F865402627F82512009800FE /* DetailsFactory.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		F865401927F8214D009800FE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F865401A27F82168009800FE /* ArtworkCell.swift */,
+				F865401B27F82168009800FE /* ArtworkCell.xib */,
+				F865401E27F82396009800FE /* DetailCell.swift */,
+				F865401F27F82396009800FE /* DetailCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -408,7 +448,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F865401D27F82168009800FE /* ArtworkCell.xib in Resources */,
 				F865401527F80AC4009800FE /* ItunesMediaCell.xib in Resources */,
+				F865402127F82396009800FE /* DetailCell.xib in Resources */,
 				F8653F4E27F6D2AF009800FE /* LaunchScreen.storyboard in Resources */,
 				F8653F4B27F6D2AF009800FE /* Assets.xcassets in Resources */,
 				F8653F4927F6D2AD009800FE /* Main.storyboard in Resources */,
@@ -436,12 +478,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F865402727F82512009800FE /* DetailsFactory.swift in Sources */,
 				F8653FEB27F754DE009800FE /* ApiClient.swift in Sources */,
 				F865401427F80AC4009800FE /* ItunesMediaCell.swift in Sources */,
 				F8653FF627F7562C009800FE /* SearchApi.swift in Sources */,
+				F865401827F8147D009800FE /* DetailsViewController.swift in Sources */,
 				F8653FEF27F75536009800FE /* Result.swift in Sources */,
+				F865402527F82504009800FE /* DetailsRouter.swift in Sources */,
 				F8653FF827F758A7009800FE /* ApiRequest+Extensions.swift in Sources */,
 				F8653FA927F73D57009800FE /* SearchUseCase.swift in Sources */,
+				F865402327F824F2009800FE /* DetailsPresenter.swift in Sources */,
 				F8653F4627F6D2AD009800FE /* ViewController.swift in Sources */,
 				F8653F8127F71A49009800FE /* SearchViewController.swift in Sources */,
 				F8653FFC27F75E1E009800FE /* SearchRouter.swift in Sources */,
@@ -449,10 +495,12 @@
 				F8653F4227F6D2AD009800FE /* AppDelegate.swift in Sources */,
 				F8653FA527F73CB5009800FE /* ApiItunesMedia.swift in Sources */,
 				F8653F8327F734D2009800FE /* AppCoordinator.swift in Sources */,
+				F865402027F82396009800FE /* DetailCell.swift in Sources */,
 				F8653FB227F74057009800FE /* ApiSearchRepository.swift in Sources */,
 				F8653FED27F754F4009800FE /* ApiResponse.swift in Sources */,
 				F8653FF227F7554F009800FE /* SearchRepository.swift in Sources */,
 				F8653FA327F73B68009800FE /* ItunesMedia.swift in Sources */,
+				F865401C27F82168009800FE /* ArtworkCell.swift in Sources */,
 				F8653FFA27F75D18009800FE /* SearchPresenter.swift in Sources */,
 				F8653FFE27F75EB2009800FE /* SearchFactory.swift in Sources */,
 				F865400127F76292009800FE /* ViewControllerBaseProtocol.swift in Sources */,

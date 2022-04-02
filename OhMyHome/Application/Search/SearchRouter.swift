@@ -8,7 +8,7 @@
 import Foundation
 
 protocol SearchRouter {
-    func moveToDetail()
+    func moveToDetail(media : ItunesMedia)
 }
 
 class SearchRouterImpl : SearchRouter {
@@ -18,7 +18,14 @@ class SearchRouterImpl : SearchRouter {
         self.searchViewController = searchViewController
     }
     
-    func moveToDetail() {
+    func moveToDetail(media : ItunesMedia) {
         //TODO: move to detail here
+        let detailViewController = DetailsViewController()
+        let factory = DetailsFactory()
+        factory.configure(detailsViewController: detailViewController)
+        detailViewController.presenter.media = media
+        DispatchQueue.main.async {
+            self.searchViewController?.navigationController?.pushViewController(detailViewController, animated: true)
+        }
     }
 }
