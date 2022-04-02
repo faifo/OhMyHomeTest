@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum ViewControllerState {
+public enum ViewControllerState {
     case loading
     case finish(String?)
 }
@@ -16,6 +16,8 @@ protocol SearchPresenter : ViewControllerBaseProtocol, SearchBarBaseProtocol {
     func configureCell(cell : ItunesMediaCell, at row : Int)
     func loadMore()
     func moveToDetail(at row : Int)
+    var router: SearchRouter { get }
+
 }
 
 protocol SearchView: AnyObject {

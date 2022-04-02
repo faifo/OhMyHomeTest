@@ -11,6 +11,8 @@ protocol DetailsPresenter {
     func backToSearch()
     func configureArtWork(cell : ArtworkCell)
     func configureDetails(cell : DetailCell, row : Int)
+    var router: DetailsRouter { get }
+
 }
 
 protocol DetailsView : AnyObject {

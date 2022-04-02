@@ -43,6 +43,17 @@
 		F865402327F824F2009800FE /* DetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F865402227F824F2009800FE /* DetailsPresenter.swift */; };
 		F865402527F82504009800FE /* DetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F865402427F82504009800FE /* DetailsRouter.swift */; };
 		F865402727F82512009800FE /* DetailsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F865402627F82512009800FE /* DetailsFactory.swift */; };
+		F865402A27F83988009800FE /* ApiClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F865402927F83988009800FE /* ApiClientTest.swift */; };
+		F865402C27F89C19009800FE /* URLSessionStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = F865402B27F89C19009800FE /* URLSessionStub.swift */; };
+		F865402F27F89D4C009800FE /* NSError+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F865402E27F89D4C009800FE /* NSError+Extensions.swift */; };
+		F865403127F89E55009800FE /* SearchParameters+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F865403027F89E55009800FE /* SearchParameters+Extensions.swift */; };
+		F865403327F89FED009800FE /* ItunesMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = F865403227F89FED009800FE /* ItunesMedia.swift */; };
+		F865403527F8A128009800FE /* ApiSearchRepositorySpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F865403427F8A128009800FE /* ApiSearchRepositorySpy.swift */; };
+		F865403B27F8A290009800FE /* SearchRouterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F865403A27F8A290009800FE /* SearchRouterSpy.swift */; };
+		F865403D27F8A349009800FE /* SearchPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F865403C27F8A349009800FE /* SearchPresenterSpy.swift */; };
+		F865403F27F8A45B009800FE /* SearchUseCaseStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = F865403E27F8A45B009800FE /* SearchUseCaseStub.swift */; };
+		F865404127F8A52A009800FE /* SearchViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F865404027F8A52A009800FE /* SearchViewSpy.swift */; };
+		F865404327F8A600009800FE /* SearchPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F865404227F8A600009800FE /* SearchPresenterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +114,17 @@
 		F865402227F824F2009800FE /* DetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenter.swift; sourceTree = "<group>"; };
 		F865402427F82504009800FE /* DetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRouter.swift; sourceTree = "<group>"; };
 		F865402627F82512009800FE /* DetailsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsFactory.swift; sourceTree = "<group>"; };
+		F865402927F83988009800FE /* ApiClientTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientTest.swift; sourceTree = "<group>"; };
+		F865402B27F89C19009800FE /* URLSessionStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionStub.swift; sourceTree = "<group>"; };
+		F865402E27F89D4C009800FE /* NSError+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSError+Extensions.swift"; sourceTree = "<group>"; };
+		F865403027F89E55009800FE /* SearchParameters+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchParameters+Extensions.swift"; sourceTree = "<group>"; };
+		F865403227F89FED009800FE /* ItunesMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesMedia.swift; sourceTree = "<group>"; };
+		F865403427F8A128009800FE /* ApiSearchRepositorySpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiSearchRepositorySpy.swift; sourceTree = "<group>"; };
+		F865403A27F8A290009800FE /* SearchRouterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouterSpy.swift; sourceTree = "<group>"; };
+		F865403C27F8A349009800FE /* SearchPresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenterSpy.swift; sourceTree = "<group>"; };
+		F865403E27F8A45B009800FE /* SearchUseCaseStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUseCaseStub.swift; sourceTree = "<group>"; };
+		F865404027F8A52A009800FE /* SearchViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewSpy.swift; sourceTree = "<group>"; };
+		F865404227F8A600009800FE /* SearchPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,7 +193,10 @@
 		F8653F5727F6D2AF009800FE /* OhMyHomeTests */ = {
 			isa = PBXGroup;
 			children = (
+				F865402D27F89D3F009800FE /* Helpers */,
 				F8653F5827F6D2AF009800FE /* OhMyHomeTests.swift */,
+				F865402927F83988009800FE /* ApiClientTest.swift */,
+				F865404227F8A600009800FE /* SearchPresenterTests.swift */,
 			);
 			path = OhMyHomeTests;
 			sourceTree = "<group>";
@@ -344,6 +369,62 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		F865402827F8396D009800FE /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				F865403427F8A128009800FE /* ApiSearchRepositorySpy.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		F865402D27F89D3F009800FE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F865403927F8A264009800FE /* UseCases */,
+				F865403827F8A25B009800FE /* Routers */,
+				F865403727F8A256009800FE /* Views */,
+				F865402827F8396D009800FE /* Repository */,
+				F865403627F8A20D009800FE /* Presenter */,
+				F865402B27F89C19009800FE /* URLSessionStub.swift */,
+				F865402E27F89D4C009800FE /* NSError+Extensions.swift */,
+				F865403027F89E55009800FE /* SearchParameters+Extensions.swift */,
+				F865403227F89FED009800FE /* ItunesMedia.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F865403627F8A20D009800FE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				F865403C27F8A349009800FE /* SearchPresenterSpy.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		F865403727F8A256009800FE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F865404027F8A52A009800FE /* SearchViewSpy.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F865403827F8A25B009800FE /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				F865403A27F8A290009800FE /* SearchRouterSpy.swift */,
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		F865403927F8A264009800FE /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				F865403E27F8A45B009800FE /* SearchUseCaseStub.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -513,6 +594,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8653F5927F6D2AF009800FE /* OhMyHomeTests.swift in Sources */,
+				F865402F27F89D4C009800FE /* NSError+Extensions.swift in Sources */,
+				F865403327F89FED009800FE /* ItunesMedia.swift in Sources */,
+				F865403D27F8A349009800FE /* SearchPresenterSpy.swift in Sources */,
+				F865403B27F8A290009800FE /* SearchRouterSpy.swift in Sources */,
+				F865403F27F8A45B009800FE /* SearchUseCaseStub.swift in Sources */,
+				F865404327F8A600009800FE /* SearchPresenterTests.swift in Sources */,
+				F865404127F8A52A009800FE /* SearchViewSpy.swift in Sources */,
+				F865403527F8A128009800FE /* ApiSearchRepositorySpy.swift in Sources */,
+				F865402A27F83988009800FE /* ApiClientTest.swift in Sources */,
+				F865402C27F89C19009800FE /* URLSessionStub.swift in Sources */,
+				F865403127F89E55009800FE /* SearchParameters+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
