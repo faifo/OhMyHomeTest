@@ -33,6 +33,7 @@ class SearchViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         setupViews()
+        searchBar.becomeFirstResponder()
     }
     
     func setupViews() {
@@ -132,13 +133,30 @@ extension SearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
         presenter.searchButtonClicked(searchBar: searchBar)
-    }
+    }    
 }
 
 extension SearchViewController: SearchView {
     func refreshTableView() {
         DispatchQueue.main.async {
             self.tableView.reloadData()
+        }
+    }
+    
+    func updateViewControllerState(state: ViewControllerState) {
+        switch state {
+            case .loading:
+                //TODO:
+                break
+            case let .finish(message):
+                if let msg = message {
+                    let alertVC = UIAlertController(title: "", message: msg, preferredStyle: .alert)
+                    let action = UIAlertAction(title: "OK", style: .default)
+                    alertVC.addAction(action)
+                    DispatchQueue.main.async {
+                        self.navigationController?.present(alertVC, animated: true)
+                    }
+                }
         }
     }
 }

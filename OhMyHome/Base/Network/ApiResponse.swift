@@ -47,6 +47,8 @@ struct ApiResponse<T: Decodable> {
             self.httpUrlResponse = httpUrlResponse
             self.data = data
         } catch {
+            print(error.localizedDescription)
+            print(String(data: data!, encoding: String.Encoding.utf8))
             throw ApiParseError(error: error, httpUrlResponse: httpUrlResponse, data: data)
         }
     }

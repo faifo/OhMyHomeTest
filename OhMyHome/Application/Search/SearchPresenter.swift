@@ -7,6 +7,11 @@
 
 import UIKit
 
+enum ViewControllerState {
+    case loading
+    case finish(String?)
+}
+
 protocol SearchPresenter : ViewControllerBaseProtocol, SearchBarBaseProtocol {
     func configureCell(cell : ItunesMediaCell, at row : Int)
     func loadMore()
@@ -15,6 +20,7 @@ protocol SearchPresenter : ViewControllerBaseProtocol, SearchBarBaseProtocol {
 
 protocol SearchView: AnyObject {
     func refreshTableView()
+    func updateViewControllerState(state : ViewControllerState)
 }
 
 class SearchPresenterImpl: SearchPresenter {
@@ -22,9 +28,11 @@ class SearchPresenterImpl: SearchPresenter {
     fileprivate var searchUseCase: SearchUseCase
     private(set) var router: SearchRouter
     var term : String?
+    var currentSearchTerm : String?
     var offset : Int = 0
     var hasMore : Bool = true
     var medias : [ItunesMedia] = []
+    var viewControllerState : ViewControllerState = .finish(nil)
 
     init(view: SearchView, useCase: SearchUseCase, router: SearchRouter) {
         self.view = view
@@ -50,9 +58,22 @@ class SearchPresenterImpl: SearchPresenter {
             return
         }
         
+        // check if search term changes
+        if currentSearchTerm != searchTerm {
+            hasMore = true
+            offset = 0
+            self.medias = []
+            self.view?.refreshTableView()
+            currentSearchTerm = nil
+        }
+        
         guard hasMore == true else {
             return
         }
+        
+        
+        
+        view?.updateViewControllerState(state: .loading)
         
         searchUseCase.search(parameters: SearchParameters(term: searchTerm, offset: offset)) {[weak self] result in
             guard let self = self else {
@@ -71,8 +92,10 @@ class SearchPresenterImpl: SearchPresenter {
                     self.medias += newMedias
                     
                     self.view?.refreshTableView()
-                    
+                    self.view?.updateViewControllerState(state: .finish(nil))
+                    self.currentSearchTerm = self.term
                 case let .failure(error):
+                    self.view?.updateViewControllerState(state: .finish(error.localizedDescription))
                     print(error.localizedDescription)
                     
             }
