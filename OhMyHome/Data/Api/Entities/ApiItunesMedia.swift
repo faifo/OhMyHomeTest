@@ -27,11 +27,12 @@ struct ApiSearchResponse : Decodable {
 
 struct ApiItunesMedia : Decodable {
     var kind: String?
-    var artworkUrl60: String?
+    @URLPercentEncoding var artworkUrl60: URL?
+    @URLPercentEncoding var artworkUrl100 : URL?
+
     var trackName: String?
     var artistName: String?
     var collectionName : String?
-    var artworkUrl100 : String?
     var releaseDate : String?
     
     
@@ -48,13 +49,13 @@ struct ApiItunesMedia : Decodable {
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.kind = try container.decode(String?.self, forKey: .kind)
-        self.artworkUrl60 = try container.decode(String?.self, forKey: .artworkUrl60)
-        self.trackName = try container.decode(String?.self, forKey: .trackName)
-        self.collectionName = try container.decode(String?.self, forKey: .collectionName)
-        self.artistName = try container.decode(String?.self, forKey: .artistName)
-        self.artworkUrl100 = try container.decode(String?.self, forKey: .artworkUrl100)
-        self.releaseDate = try container.decode(String?.self, forKey: .releaseDate)
+        self.kind = try container.decodeIfPresent(String?.self, forKey: .kind) ?? nil
+        self.artworkUrl60 = try container.decodeIfPresent(URL?.self, forKey: .artworkUrl60) ?? nil
+        self.trackName = try container.decodeIfPresent(String?.self, forKey: .trackName) ?? nil
+        self.collectionName = try container.decodeIfPresent(String?.self, forKey: .collectionName) ?? nil
+        self.artistName = try container.decodeIfPresent(String?.self, forKey: .artistName) ?? nil
+        self.artworkUrl100 = try container.decodeIfPresent(URL?.self, forKey: .artworkUrl100) ?? nil
+        self.releaseDate = try container.decodeIfPresent(String?.self, forKey: .releaseDate) ?? nil
 
     }
     

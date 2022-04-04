@@ -33,8 +33,8 @@ class DetailsPresenterImpl : DetailsPresenter {
     }
     
     func configureArtWork(cell: ArtworkCell) {
-        if let imageUrl = media.artworkUrl100, let url = URL(string: imageUrl) {
-            URLSession.shared.dataTask( with: url, completionHandler: {
+        if let imageUrl = media.artworkUrl100 {
+            URLSession.shared.dataTask( with: imageUrl, completionHandler: {
                 (data, response, error) -> Void in
                 DispatchQueue.main.async {
                     if let data = data {
@@ -44,7 +44,7 @@ class DetailsPresenterImpl : DetailsPresenter {
             }).resume()
         }
     }
-    
+
     func configureDetails(cell: DetailCell, row: Int) {
         switch row {
             case DetailsRowType.TrackName.rawValue:
@@ -53,10 +53,10 @@ class DetailsPresenterImpl : DetailsPresenter {
             case DetailsRowType.Collection.rawValue:
                 cell.titleLabel.text = "Collection"
                 cell.valueLabel.text = media.collectionName ?? ""
-            case DetailsRowType.TrackName.rawValue:
+            case DetailsRowType.Artist.rawValue:
                 cell.titleLabel.text = "Artist"
                 cell.valueLabel.text = media.artistName ?? ""
-            case DetailsRowType.TrackName.rawValue:
+            case DetailsRowType.ReleaseDate.rawValue:
                 cell.titleLabel.text = "Release Date"
                 cell.valueLabel.text = media.releaseDate ?? ""
             case DetailsRowType.Kind.rawValue:
