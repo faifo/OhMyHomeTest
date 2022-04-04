@@ -54,6 +54,7 @@
 		F865403F27F8A45B009800FE /* SearchUseCaseStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = F865403E27F8A45B009800FE /* SearchUseCaseStub.swift */; };
 		F865404127F8A52A009800FE /* SearchViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F865404027F8A52A009800FE /* SearchViewSpy.swift */; };
 		F865404327F8A600009800FE /* SearchPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F865404227F8A600009800FE /* SearchPresenterTests.swift */; };
+		F885B14327FAB0960074DD95 /* URLPercentEncoding+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F885B14227FAB0960074DD95 /* URLPercentEncoding+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +126,7 @@
 		F865403E27F8A45B009800FE /* SearchUseCaseStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUseCaseStub.swift; sourceTree = "<group>"; };
 		F865404027F8A52A009800FE /* SearchViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewSpy.swift; sourceTree = "<group>"; };
 		F865404227F8A600009800FE /* SearchPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenterTests.swift; sourceTree = "<group>"; };
+		F885B14227FAB0960074DD95 /* URLPercentEncoding+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLPercentEncoding+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -307,6 +309,7 @@
 				F8653FEA27F754DE009800FE /* ApiClient.swift */,
 				F8653FEC27F754F4009800FE /* ApiResponse.swift */,
 				F8653FEE27F75536009800FE /* Result.swift */,
+				F885B14227FAB0960074DD95 /* URLPercentEncoding+Extension.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -567,6 +570,7 @@
 				F8653FEF27F75536009800FE /* Result.swift in Sources */,
 				F865402527F82504009800FE /* DetailsRouter.swift in Sources */,
 				F8653FF827F758A7009800FE /* ApiRequest+Extensions.swift in Sources */,
+				F885B14327FAB0960074DD95 /* URLPercentEncoding+Extension.swift in Sources */,
 				F8653FA927F73D57009800FE /* SearchUseCase.swift in Sources */,
 				F865402327F824F2009800FE /* DetailsPresenter.swift in Sources */,
 				F8653F4627F6D2AD009800FE /* ViewController.swift in Sources */,
@@ -779,8 +783,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -808,8 +814,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

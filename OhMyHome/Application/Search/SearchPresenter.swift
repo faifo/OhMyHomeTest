@@ -91,9 +91,10 @@ class SearchPresenterImpl: SearchPresenter {
                         self.offset += 1
                     }
                     
-                    self.medias += newMedias
+                    self.medias.append(contentsOf: newMedias)
                     
                     self.view?.refreshTableView()
+                    
                     self.view?.updateViewControllerState(state: .finish(nil))
                     self.currentSearchTerm = self.term
                 case let .failure(error):
@@ -106,11 +107,13 @@ class SearchPresenterImpl: SearchPresenter {
     
     func configureCell(cell: ItunesMediaCell, at row: Int) {
         let media = self.medias[row]
+        // reset cell data first
+        
         cell.kindLabel.text = media.kind ?? ""
         cell.titleLabel.text = media.trackName ?? ""
         
-        if let imageUrl = media.artworkUrl60, let url = URL(string: imageUrl) {
-            URLSession.shared.dataTask( with: url, completionHandler: {
+        if let imageUrl = media.artworkUrl60 {
+            URLSession.shared.dataTask( with: imageUrl, completionHandler: {
                 (data, response, error) -> Void in
                 DispatchQueue.main.async {
                     if let data = data {
